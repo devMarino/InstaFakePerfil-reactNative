@@ -1,76 +1,76 @@
 import { StyleSheet, Text, View } from "react-native";
-import {ionicons} from '@expo/vector-icons' 
 import AntDesign from '@expo/vector-icons/AntDesign';
 import Entypo from '@expo/vector-icons/Entypo';
 import Feather from '@expo/vector-icons/Feather';
+
 export default function Header () {
-    return(
-        <View style={styles.header}>
-            <AntDesign style={styles.plus} name="plus"/>
-        <View style={styles.subHeader}>
-            <Entypo style={styles.lock} name="lock"/>
-            <Text style={styles.title}>marcm_cb</Text>
-                <Entypo style={styles.triangleDown} name="triangle-down"/>
-            </View>
-                <Feather style={styles.atSign} name="at-sign" />
-                <Entypo style={styles.menu} name="menu"/>
+    const IconeBox = ({ children }) => (
+        <View style={styles.iconeBox}>
+            { children }
         </View>
     )
+    
+    return(
+    <View style={styles.header}>
+
+            <IconeBox>
+                <AntDesign size={22} name="plus" color='#fff'/>
+            </IconeBox>
+
+        <View style={styles.subHeader}>
+            <View style={styles.iconesCentrais}>
+            <IconeBox>
+                <Entypo size={22} name="lock" color='#fff'/>
+            </IconeBox>
+
+            <Text style={styles.title}>marcm_cb</Text>
+        
+            <IconeBox>
+                <Entypo size={22} name="triangle-down" color='#fff'/>
+            </IconeBox>
+
+            </View>
+            <IconeBox>
+                <Feather size={22} name="at-sign" color='#fff' />
+            </IconeBox>
+            <IconeBox>
+                <AntDesign size={22} name="menu" color='#fff'/>
+            </IconeBox>
+        </View>
+    </View>
+    )
+    
 }
 
 const styles = StyleSheet.create({
     header: {
-        flex: 1,
+        width: '100%',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        gap: 5,
         width: '100%',
-        height: 'auto',
-        border: '5px solid #fff',
-        flexWrap: 'wrap'
+        paddingVertical: 10,
+        paddingHorizontal: 12
     },
     subHeader: {
-        flex:1,
-        justifyContent:'center',
+        textAlign: 'center',
         flexDirection: 'row',
-        marginLeft:30,
-        gap: 10
+        gap: 20
     },
     title: {
         fontSize: 20,
         color: '#fff',
-        marginTop: 5
 
     },
-    lock: {
-        fontSize: 18,
-        marginTop: 9,
-        color: '#fff'
+    iconeBox: {
+    width: 32,
+    height: 32,
+    alignItems: 'center',
+    justifyContent: 'center'
     },
-    plus: {
-        fontSize: 18,
-        marginTop: 8,
-        marginLeft: 5,
-        color: '#fff'
-    },
-    atSign: {
-        fontSize: 18,
-        marginTop: 8,
-        color: '#fff'
-    },
-    menu: {
-        fontSize: 25,
-        marginTop: 5,
-        marginRight: 5,
-        color: '#fff'
-    },
-    triangleDown: {
-        fontSize: 15,
-        marginTop: 12,
-        color: '#fff',
-        marginTop: 10
+    iconesCentrais:{
+        flexDirection: 'row'
     }
 
 
     
-})
+    })

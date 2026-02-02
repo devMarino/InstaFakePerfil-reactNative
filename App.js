@@ -1,8 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import {StyleSheet, Text, View } from 'react-native';
-import Header from './src/components/Header';
+import {StyleSheet, View } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
-import Main from './src/components/Main';
+import Header from './src/components/Header';
+import Perfil from './src/components/Perfil';
+import Biografia from './src/components/Biografia';
+import Botoes from './src/components/Botoes';
+import Icones from './src/components/Icones';
 export default function App() {
   return (
       <SafeAreaProvider>
@@ -10,7 +13,10 @@ export default function App() {
           <StatusBar/>
           <View>
               <Header/>
-              <Main/>
+              <Perfil/>
+              <Biografia/>
+              <Botoes/>
+              <Icones/>
           </View>
         </SafeAreaView>
       </SafeAreaProvider>
@@ -19,8 +25,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#0e0808',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flex: 1,
+    backgroundColor: '#000'
   }
 });
