@@ -26,16 +26,20 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
         justifyContent: 'space-around',
-        margin:5,
-        padding: 2,
+        marginVertical: 12,
+        padding: 1,
     },
     text: {
         textAlign: 'center',
         color: '#fff',
+        fontWeight: 'bold'
     },
     btn: {
         width: '100%',
         backgroundColor:'#036acbf9',
+        borderRadius: 5,
+        paddingVertical: 5 
+        
     }
 
 })

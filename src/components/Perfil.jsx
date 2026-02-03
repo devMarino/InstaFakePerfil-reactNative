@@ -73,10 +73,6 @@ const styles = StyleSheet.create({
     perfil: {
         flex: 1,
         marginLeft: 10
-    },
-    containerBio: {
-        
-
     }
 
 })

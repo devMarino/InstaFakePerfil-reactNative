@@ -6,6 +6,7 @@ import Perfil from './src/components/Perfil';
 import Biografia from './src/components/Biografia';
 import Botoes from './src/components/Botoes';
 import Icones from './src/components/Icones';
+import Grid from './src/components/Grid';
 export default function App() {
   return (
       <SafeAreaProvider>
@@ -17,6 +18,7 @@ export default function App() {
               <Biografia/>
               <Botoes/>
               <Icones/>
+              <Grid/>
           </View>
         </SafeAreaView>
       </SafeAreaProvider>
